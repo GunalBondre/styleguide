@@ -14,9 +14,14 @@ import {
 	FaRegTimesCircle,
 } from 'react-icons/fa';
 
-const Alert = ({ variant, message, noBorder, noShadow, ...restProps }) => {
+const Alert = ({ variant, message, noBorder, ...restProps }) => {
 	return (
-		<AlertContainer variant={variant} message={message} {...restProps}>
+		<AlertContainer
+			variant={variant}
+			message={message}
+			noBorder={noBorder}
+			{...restProps}
+		>
 			<IconTextWrapper>
 				<IconWrapper>
 					{variant === AlertVariant.SUCCESS && <FaCheckCircle />}
