@@ -20,6 +20,7 @@ const Alert = ({ variant, message, noBorder, ...restProps }) => {
 			variant={variant}
 			message={message}
 			noBorder={noBorder}
+			data-testid='alert-component'
 			{...restProps}
 		>
 			<IconTextWrapper>
@@ -29,7 +30,9 @@ const Alert = ({ variant, message, noBorder, ...restProps }) => {
 					{variant === AlertVariant.ERROR && <FaRegTimesCircle />}
 				</IconWrapper>
 				<TextWrapper>
-					<div className='message'>{message}</div>
+					<div className='message' data-testid='message'>
+						{message}
+					</div>
 				</TextWrapper>
 			</IconTextWrapper>
 		</AlertContainer>
