@@ -1,7 +1,7 @@
 import Typography from './Typography';
 
 export default {
-	title: 'Typography',
+	title: 'Style Guide/components/Typography',
 	component: Typography,
 };
 
