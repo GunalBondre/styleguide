@@ -15,7 +15,14 @@ export const AccordionItemWrapper = styled.div`
 	}
 `;
 export const AccordionDescriptionWrapper = styled.div`
-	padding: 0px 20px;
+	${(props) => {
+		if (props.isActive) {
+			return css`
+				padding: 10px 20px;
+			`;
+		}
+		return ``;
+	}}
 `;
 export const AccordionHeadingWrapper = styled.div`
 	display: flex;
@@ -23,8 +30,7 @@ export const AccordionHeadingWrapper = styled.div`
 	padding: 10px 20px;
 	transition: all 1s ease;
 	${(props) => {
-		console.log('first', props);
-		if (props.open) {
+		if (props.isActive) {
 			return css`
 				background-color: aliceblue;
 				border-radius: 5px;
@@ -34,4 +40,6 @@ export const AccordionHeadingWrapper = styled.div`
 	}}
 `;
 export const HeadingWrapper = styled.div``;
-export const HeadingIconWrapper = styled.div``;
+export const HeadingIconWrapper = styled.div`
+	transition: all 1s ease;
+`;

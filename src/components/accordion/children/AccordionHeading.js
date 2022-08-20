@@ -7,11 +7,29 @@ import {
 } from '../Accordion.style';
 
 import { FaPlus, FaMinus } from 'react-icons/fa';
-const AccordionHeading = ({ children, open, alwaysOpen }) => {
+const AccordionHeading = ({
+	children,
+	open,
+	setOpen,
+	active,
+	setActive,
+	index,
+	isActive,
+}) => {
+	const handleClick = (e) => {
+		setOpen(!open);
+		setActive(active === index ? null : index);
+	};
 	return (
-		<AccordionHeadingWrapper open={open} alwaysOpen={alwaysOpen}>
+		<AccordionHeadingWrapper
+			open={open}
+			isActive={isActive}
+			onClick={handleClick}
+		>
 			<HeadingWrapper>{children}</HeadingWrapper>
-			<HeadingIconWrapper>{open ? <FaMinus /> : <FaPlus />}</HeadingIconWrapper>
+			<HeadingIconWrapper>
+				{isActive ? <FaMinus /> : <FaPlus />}
+			</HeadingIconWrapper>
 		</AccordionHeadingWrapper>
 	);
 };
