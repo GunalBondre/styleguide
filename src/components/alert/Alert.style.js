@@ -5,7 +5,7 @@ export const AlertContainer = styled.div`
 	max-width: 350px;
 	display: flex;
 	padding: 10px 20px;
-	border-radius: ${(props) => (props.noBorder ? '0px' : '20px')};
+	border-radius: ${(props) => (props.noBorder ? '0px' : '10px')};
 	${(props) => {
 		if (props.variant === 'success') {
 			return css`
