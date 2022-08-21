@@ -25,6 +25,6 @@ export const ErrorAlert = Template.bind({});
 
 ErrorAlert.args = {
 	variant: 'error',
-	message: 'Wrong password entered please check again',
+	message: 'Wrong password entered',
 	noBorder: true,
 };
