@@ -1,7 +1,7 @@
 import Alert from './Alert';
 
 export default {
-	title: 'Alert',
+	title: 'Style Guide/Components/Alert',
 	component: Alert,
 };
 
